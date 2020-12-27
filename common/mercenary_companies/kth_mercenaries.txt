@@ -1,0 +1,30 @@
+kth_carthaginian_elephants_mercs = {
+    regiments_per_development = 0.005
+    home_province = 341 # Carthage
+    cavalry_weight = 1
+    cavalry_cap = 10
+    cost_modifier = 2
+	sprites = { KTH_sprite_pack }
+    trigger = {
+		tag = KTH
+	}
+	modifier = {
+        cavalry_power = 0.5
+	}
+}
+
+kth_carthaginian_mercs = {
+    regiments_per_development = 0.015
+    home_province = 341 # Carthage
+    cavalry_weight = 0.2
+    cavalry_cap = 4
+    cost_modifier = 1.25
+    artillery_weight = 0.2
+	sprites = { KTH_sprite_pack }
+    trigger = {
+		tag = KTH
+	}
+	modifier = {
+        infantry_power = 0.1
+	}
+}

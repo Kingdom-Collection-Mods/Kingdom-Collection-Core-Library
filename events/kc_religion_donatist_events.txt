@@ -1,0 +1,170 @@
+namespace = kc_religion_donatist_event
+country_event = {
+	id = kc_religion_donatist_event.1
+	title = kc_donatist_agonistici_revolution_title
+	desc = kc_donatist_agonistici_revolution_desc
+	picture = ANGRY_MOB_eventPicture
+	trigger = {
+		religion = kc_donatist
+		current_age = age_of_revolutions
+		has_global_flag = first_revolution_center_spawned
+	}
+	mean_time_to_happen = {
+		months = 6
+	}
+	option = {
+		name = kc_donatist_agonistici_revolution_invite
+		add_years_of_income = -0.5
+		random_owned_province = {
+			limit = {
+				religion = kc_donatist
+				has_revolution_in_province = no
+			}
+			set_revolution_in_province = yes
+		}
+	}
+	option = {
+		name = kc_donatist_agonistici_revolution_ignore
+		hidden_effect = {
+			random_list = {
+				50 = {
+					random_owned_province = {
+						limit = {
+							religion = kc_donatist
+						}
+						spawn_rebels = {
+							size = 3
+							type = religious_rebels
+						}
+						set_revolution_in_province = yes
+					}
+					random_owned_province = {
+						limit = {
+							religion = kc_donatist
+						}
+						spawn_rebels = {
+							size = 3
+							type = religious_rebels
+						}
+						set_revolution_in_province = yes
+					}
+				}
+				50 = {
+					add_prestige = 5
+				}
+			}
+		}
+	}
+	option = {
+		name = kc_donatist_agonistici_revolution_refuse
+		random_owned_province = {
+			limit = {
+				religion = kc_donatist
+			}
+			spawn_rebels = {
+				size = 3
+				type = religious_rebels
+			}
+			set_revolution_in_province = yes
+		}
+	}
+}
+
+country_event = {
+	id = kc_religion_donatist_event.2
+	title = kc_donatist_agonistici_rise_title
+	desc = kc_donatist_agonistici_rise_desc
+	picture = ANGRY_MOB_eventPicture
+	trigger = {
+		religion = kc_donatist
+		barbary_coast_area = {
+			type = ANY
+			owned_by = ROOT
+		}
+		NOT = { has_country_flag = kc_donatist_agonistici_rise_flag }
+		has_any_disaster = no
+	}
+	mean_time_to_happen = {
+		months = 6
+	}
+	immediate = {
+		set_country_flag = kc_donatist_agonistici_rise_flag
+	}
+	option = {
+		name = kc_donatist_agonistici_rise_recognize
+		custom_tooltip = kc_enable_agonistici_mercs_tt
+		set_country_flag = kc_enable_agonistici_mercs_flag
+		reduce_legitimacy_small_effect = yes
+	}
+	option = {
+		name = kc_donatist_agonistici_rise_deny
+		add_legitimacy = 5
+		random_owned_province = {
+			limit = {
+				is_capital = no
+				is_in_capital_area = yes
+			}
+			spawn_rebels = {
+				size = 2
+				type = religious_rebels
+			}
+		}
+	}
+}
+
+country_event = {
+	id = kc_religion_donatist_event.3
+	title = kc_religion_donatist_pope_support_africa_title
+	trigger = {
+		is_papal_controller = yes
+		any_country = {
+			religion = kc_donatist
+			NOT = { has_country_modifier = kc_religion_donatist_papal_support_modifier }
+		}
+	}
+	mean_time_to_happen = {
+		years = 20
+	}
+	option = {
+		name = kth_send_help
+		random_country = {
+			limit = {
+				religion = kc_donatist
+				capital_scope = {
+					NOT = { continent = africa }
+				}
+				is_free_or_tributary_trigger = yes
+				NOT = { has_country_modifier = kc_religion_donatist_papal_support_modifier }
+			}
+			reduce_curia_treasury_medium_effect = yes
+			country_event = {
+				id = kc_religion_donatist_event.4
+			}
+			tooltip = {
+				add_treasury = 100
+				add_country_modifier = {
+					name = kc_religion_donatist_papal_support_modifier
+					duration = 1825
+				}
+			}
+		}
+	}
+	option = {
+		name = kth_no
+		add_prestige = -5
+	}
+}
+
+country_event = {
+	id = kc_religion_donatist_event.4
+	title = kc_religion_donatist_pope_sends_support_title
+	is_triggered_only = yes
+	option = {
+		name = kth_thanks
+		add_treasury = 100
+		add_country_modifier = {
+			name = kc_religion_donatist_papal_support_modifier
+			duration = 1825
+		}
+	}
+}

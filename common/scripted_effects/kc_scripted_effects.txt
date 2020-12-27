@@ -1,0 +1,24 @@
+kc_increase_legitimacy_huge_effect = { #No IFs as the game hides these itself when incorrect.
+	add_legitimacy = 30
+	add_horde_unity = 30
+	add_devotion = 30
+	add_republican_tradition = 15
+}
+kc_increase_legitimacy_mediumlarge_effect = { #No IFs as the game hides these itself when incorrect.
+	add_legitimacy = 20
+	add_horde_unity = 20
+	add_devotion = 20
+	add_republican_tradition = 10
+}
+kc_reduce_legitimacy_mediumlarge_effect = { #No IFs as the game hides these itself when incorrect.
+	add_legitimacy = -20
+	add_horde_unity = -10
+	add_devotion = -10
+	add_republican_tradition = -10
+}
+kc_reduce_legitimacy_huge_effect = { #No IFs as the game hides these itself when incorrect.
+	add_legitimacy = -30
+	add_horde_unity = -30
+	add_devotion = -30
+	add_republican_tradition = -15
+}

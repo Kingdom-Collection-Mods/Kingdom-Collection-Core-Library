@@ -1,0 +1,329 @@
+country_decisions = {
+	kc_jewish_become_judaic = {
+		potential = {
+			religion = jewish
+		}
+		allow = {
+			is_subject = no
+			religion = jewish
+			stability = 3
+			NOT = { current_age = age_of_discovery }
+		}
+		effect = {
+			add_prestige = -50
+			add_stability = -3
+			change_religion = kc_jewish
+			add_country_modifier = {
+				name = kc_spirit_of_reformation_modifier
+				duration = 18250
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						owns_core_province = 379
+						owns_core_province = 1854
+						owns_core_province = 345
+						owns_core_province = 390
+						owns_core_province = 22
+					}
+				}
+			}
+		}
+	}
+	kc_jewish_title_kohen_gadol = {
+		potential = {
+			NOT = { has_ruler_modifier = kc_jewish_high_priest_ruler_modifier }
+			religion = kc_jewish
+			ruler_religion = kc_jewish
+		}
+		allow = {
+			NOT = { government = republic }
+			adm = 3			
+			has_regency = no
+			if = {
+				limit = { government = monarchy }
+				has_consort = yes
+			}			
+			379 = {
+				has_province_modifier = kc_jewish_third_temple_modifier
+			}
+		}
+		effect = {	
+			add_ruler_modifier = {
+				name = kc_jewish_high_priest_ruler_modifier
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1		
+		}
+	}
+	kc_jewish_title_malik = {
+		potential = {
+			NOT = { has_ruler_modifier = kc_jewish_king_ruler_modifier }
+			religion = kc_jewish
+			ruler_religion = kc_jewish
+		}
+		allow = {
+			NOT = { government = republic }
+			ruler_age = 30
+			mil = 3		
+			has_regency = no
+		}
+		effect = {	
+			add_ruler_modifier = {
+				name = kc_jewish_king_ruler_modifier
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	kc_jewish_title_maskil = {
+		potential = {
+			NOT = { has_ruler_modifier =  kc_jewish_scholar_ruler_modifier }
+			religion = kc_jewish			
+			ruler_religion = kc_jewish
+		}
+		allow = {
+			NOT = { government = republic }
+			ruler_age = 30
+			dip = 3		
+			has_regency = no
+		}
+		effect = {	
+			add_ruler_modifier = {
+				name = kc_jewish_scholar_ruler_modifier
+				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	kc_jewish_reinstate_proselytism = {
+		potential = {
+			NOT = { has_country_modifier =  kc_jewish_reinstated_proselytism_modifier }
+			religion = kc_jewish
+			ruler_religion = kc_jewish
+			OR = {
+				NOT = { government = republic }
+				republican_tradition = 50
+			}
+			OR = {
+				NOT = { government = monarchy }
+				legitimacy = 50
+			}
+		}
+		allow = {
+			prestige = 0
+			ruler_age = 30
+			has_regency = no
+		}
+		effect = {
+			add_prestige = -10
+			reduce_legitimacy_medium_effect = yes
+			add_country_modifier = {
+				name = kc_jewish_reinstated_proselytism_modifier
+				duration = 9125 #25 y
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				religious_unity = 0.8
+			}
+		}
+	}
+	kc_jewish_war_republic = {
+		potential = {
+			NOT = { has_country_modifier = kc_jewish_war_republic_modifier }
+			religion = kc_jewish
+		}
+		allow = {
+			government = republic
+			republican_tradition = 75
+		}
+		effect = {
+			add_country_modifier = {
+				name = kc_jewish_war_republic_modifier
+				duration = 3650
+			}
+			add_republican_tradition = -10
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	kc_jewish_become_monarchy = {
+		potential = {
+			NOT = { has_country_flag = kc_changed_to_monarchy_flag }
+			NOT = { government = monarchy }
+			religion = kc_jewish
+		}
+		allow = {
+			NOT = { has_country_flag = kc_changed_to_monarchy_flag }
+			NOT = { government = monarchy }
+		}
+		effect = {
+			change_government = monarchy
+			set_country_flag = kc_changed_to_monarchy_flag
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	kc_jewish_build_third_temple = {
+		potential = {
+			religion_group = jewish_group
+			379 = {
+				NOT = { has_province_modifier = kc_jewish_third_temple_modifier }
+			}
+		}
+		allow = {
+			owns_core_province = 379
+			379 = {
+				religion_group = jewish_group
+			}
+		}
+		effect = {
+			add_treasury = -500
+			379 = {
+				change_province_name = "Yerushalayim"
+				rename_capital = "Yerushalayim"
+				add_province_modifier = {
+					name = kc_jewish_third_temple_modifier
+					duration = -1
+				}
+				if = {
+					limit = {
+						NOT = { has_global_flag = kc_jewish_jerusalem_triggered_modifiers_activated_global_flag }
+					}
+					custom_tooltip = kc_jewish_jerusalem_triggered_modifiers_activate_tt
+					add_province_triggered_modifier = kc_jewish_religious_center
+					add_province_triggered_modifier = kc_jewish_jerusalem_held
+					set_global_flag =  kc_jewish_jerusalem_triggered_modifiers_activated_global_flag
+				}
+			}
+			
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	kc_jewish_sack_third_temple = {
+		potential = {
+			NOT = { religion_group = jewish_group }
+			379 = {
+				has_province_modifier = kc_jewish_third_temple_modifier
+			}
+		}
+		allow = {
+			owns_core_province = 379
+			379 = {
+				has_province_modifier = kc_jewish_third_temple_modifier
+			}
+		}
+		effect = {
+			add_treasury = 1000
+			379 = {
+				if = {
+					limit = { religion_group = christian }
+					change_province_name = "Jerusalem"
+					rename_capital = "Jerusalem"
+				}
+				else = {
+					change_province_name = "Al-Quds"
+					rename_capital = "Al-Quds"
+				}
+				remove_province_modifier = kc_jewish_third_temple_modifier
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	kc_canaan_pilgrimage = {
+		potential = {
+			religion = kc_canaan
+			NOT = { has_ruler_modifier = kc_canaan_pilgrimage_canaan_modifier }
+		}
+		allow = {
+			religion = kc_canaan
+			NOT = { has_ruler_modifier = kc_canaan_pilgrimage_canaan_modifier }
+		}
+		effect = {
+			add_treasury = -100
+			add_ruler_modifier = {
+				name = kc_canaan_pilgrimage_canaan_modifier
+				duration = -1
+			}
+			add_ruler_modifier = {
+				name = kc_canaan_on_pilgrimage_modifier
+				duration = 365
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	kc_canaan_switch_spouse = {
+		potential = {
+			religion = kc_canaan
+		}
+		allow = {
+			government = monarchy
+			religion = kc_canaan
+			has_country_modifier = kc_canaan_rule_marriage_gemigamie_modifier
+			NOT = { has_ruler_flag = kc_canaan_switched_spouse_flag }
+		}
+		effect = {
+			set_ruler_flag = kc_canaan_switched_spouse_flag
+		}
+	}
+
+	kc_canaan_adopt_heir = {
+		potential = {
+			government = monarchy
+			religion = kc_canaan
+		}
+		allow = {
+			religion = kc_canaan
+			has_country_modifier = kc_canaan_rule_marriage_celibacy_modifier
+			has_heir = no
+			NOT = { has_country_flag = kc_canaan_adopt_heir_ongoing }
+		}
+		effect = {
+			add_legitimacy = 5
+			country_event = {
+				id = kc_religion_canaan_event.8
+			}
+		}
+	}
+	kc_canaan_animal_sacrifice = {
+		potential = {
+			religion = kc_canaan
+		}
+		allow = {
+			religion = kc_canaan
+			years_of_income = 0.25
+			NOT = { has_country_modifier = kc_canaan_rule_recent_animal_sacrifice_modifier }
+		}
+		effect = {
+			country_event = {
+				id = kc_religion_canaan_event.9
+			}
+		}
+	}
+}

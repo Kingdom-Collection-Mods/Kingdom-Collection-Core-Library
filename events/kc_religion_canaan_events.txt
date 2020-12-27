@@ -1,0 +1,384 @@
+#TODO: AI Weight
+namespace = kc_religion_canaan_event
+country_event = {
+	id = kc_religion_canaan_event.1
+	picture = RELIGION_eventPicture
+	title = kc_religion_canaan_pilgrimage_incident_title
+	desc = kc_religion_canaan_pilgrimage_incident_desc
+	trigger = {
+		religion = kc_canaan
+		has_ruler_modifier = kc_canaan_on_pilgrimage_modifier
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		trigger = {
+			379 = {
+				NOT = { religion = kc_canaan }
+			}
+		}
+		name = kth_yes
+		random_list = {
+			50 = {
+				add_ruler_modifier = {
+					name = kc_canaan_pilgrimage_enlightened_modifier
+					duration = 1825
+				}
+				add_stability_or_adm_power = yes
+			}
+			40 = {
+				add_ruler_modifier = {
+					name = kc_canaan_pilgrimage_injury_modifier
+					duration = 1825
+				}
+				add_stability = -1
+			}
+			5 = {
+				add_ruler_modifier = {
+					name = kc_canaan_pilgrimage_enlightened_modifier
+					duration = -1
+				}
+				change_adm = 1
+				change_dip = 1
+				change_mil = 1
+			}
+			5 = {
+				add_ruler_modifier = {
+					name = kc_canaan_pilgrimage_injury_modifier
+					duration = -1
+				}
+				change_adm = -1
+				change_dip = -1
+				change_mil = -1
+			}
+		}
+	}
+	option = {
+		trigger = {
+			379 = {
+				religion = kc_canaan
+			}
+		}
+		name = kth_yes
+		random_list = {
+			55 = {
+				add_ruler_modifier = {
+					name = kc_canaan_pilgrimage_enlightened_modifier
+					duration = 1825
+				}
+				add_stability_or_adm_power = yes
+			}
+			40 = {
+				add_ruler_modifier = {
+					name = kc_canaan_pilgrimage_injury_modifier
+					duration = 1825
+				}
+				add_stability = -1
+			}
+			5 = {
+				add_ruler_modifier = {
+					name = kc_canaan_pilgrimage_enlightened_modifier
+					duration = -1
+				}
+				change_adm = 1
+				change_dip = 1
+				change_mil = 1
+			}
+		}
+	}
+	option = {
+		name = kth_no
+		reduce_legitimacy_small_effect = yes
+	}
+}
+#Canaan foundation marriage rules ruler&priest
+country_event = {
+	id = kc_religion_canaan_event.2
+	picture = BIG_BOOK_eventPicture
+	title = kc_religion_canaan_rule_marriage_title
+	desc = kc_religion_canaan_rule_marriage_desc
+	trigger = {
+		religion = kc_canaan
+		NOT = { has_country_flag = kc_canaan_rule_marriage_flag }
+	}
+	mean_time_to_happen = {
+		years = 5
+	}
+	immediate = {
+		set_country_flag = kc_canaan_rule_marriage_flag
+	}
+	option = {
+		name = kc_canaan_rule_marriage_gemigamie_modifier
+		if = {
+			limit = { government = monarchy }
+			custom_tooltip = kc_canaan_rule_marriage_gemigamie_tt
+		}		
+		add_country_modifier = {
+			name = kc_canaan_rule_marriage_gemigamie_modifier
+			duration = -1
+		}
+	}
+	option = {
+		name = kc_canaan_rule_marriage_monogamie_modifier
+		add_country_modifier = {
+			name = kc_canaan_rule_marriage_monogamie_modifier
+			duration = -1
+		}
+	}
+	option = {
+		name = kc_canaan_rule_marriage_celibacy_modifier
+		if = {
+			limit = { government = monarchy }
+			custom_tooltip = kc_canaan_rule_marriage_celibacy_tt
+		}
+		add_country_modifier = {
+			name = kc_canaan_rule_marriage_celibacy_modifier
+			duration = -1
+		}
+	}
+}
+
+#Canaan foundation prayer
+country_event = {
+	id = kc_religion_canaan_event.3
+	title = kc_religion_canaan_rule_prayer_title
+	desc = kc_religion_canaan_rule_prayer_desc
+	picture = BIG_BOOK_eventPicture
+	trigger = {
+		religion = kc_canaan
+		NOT = { has_country_flag = kc_canaan_rule_prayer_flag }
+	}
+	mean_time_to_happen = {
+		years = 10
+	}
+	immediate = {
+		set_country_flag = kc_canaan_rule_prayer_flag
+	}
+	option = {
+		name = kc_canaan_rule_prayer_dancing_modifier
+		add_country_modifier = {
+			name = kc_canaan_rule_prayer_dancing_modifier
+			duration = -1
+		}
+	}
+	option = {
+		name = kc_canaan_rule_prayer_bowing_modifier
+		add_country_modifier = {
+			name = kc_canaan_rule_prayer_bowing_modifier
+			duration = -1
+		}
+	}
+	option = {
+		name = kc_canaan_rule_prayer_kneeling_modifier
+		add_country_modifier = {
+			name = kc_canaan_rule_prayer_kneeling_modifier
+			duration = -1
+		}
+	}
+}
+
+#Canaan foundation sacrifice
+country_event = {
+	id = kc_religion_canaan_event.4
+	title = kc_religion_canaan_rule_animal_sacrifices_title
+	desc = kc_religion_canaan_rule_animal_sacrifices_desc
+	picture = BIG_BOOK_eventPicture
+	trigger = {
+		religion = kc_canaan
+		NOT = { has_country_flag = kc_canaan_rule_animal_sacrifices_flag }	
+	}
+	mean_time_to_happen = {
+		years = 20
+		modifier = {
+			factor = 2
+			NOT = { adm_power = 50 }
+		}
+	}
+	immediate = {
+		set_country_flag = kc_canaan_rule_animal_sacrifices_flag
+	}
+	option = {
+		add_stability_or_adm_power = yes
+		add_adm_power = -50
+		name = kc_canaan_rule_ban_animal_sacrifices_modifier
+		add_country_modifier = {
+			name = kc_canaan_rule_ban_animal_sacrifices_modifier
+			duration = -1
+		}
+	}
+	option = {
+		name = kc_canaan_rule_allow_animal_sacrifices_name
+		add_adm_power = -50
+		custom_tooltip = kc_canaan_rule_allow_animal_sacrifices_tt
+		set_country_flag = kc_canaan_rule_allow_animal_sacrifices_flag
+	}
+}
+
+country_event = {
+	id = kc_religion_canaan_event.5
+	title = kc_canaan_pilgrimage_site_title
+	desc = kc_canaan_pilgrimage_site_desc
+	picture = BIG_BOOK_eventPicture
+	trigger = {
+		NOT = { has_global_flag = kc_canaan_pilgrimage_site_flag }
+		religion = kc_canaan
+		owns = 379
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	immediate = {
+		set_global_flag = kc_canaan_pilgrimage_site_flag
+	}
+	#Jerusalem
+	option = {
+		name = kth_yes
+		379 = {
+			change_province_name = "Urushalim"
+			rename_capital = "Urushalim"
+			add_province_triggered_modifier = kc_canaan_religious_center
+		}
+	}
+}
+
+#Jerusalem conquered
+country_event = {
+	id = kc_religion_canaan_event.6
+	title = kc_canaan_pilgrimage_site_conquered_title
+	desc = kc_canaan_pilgrimage_site_conquered_desc
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		religion = kc_canaan
+	}
+	option = {
+		name = kth_yes
+		add_prestige = 5
+	}
+}
+
+#Jerusalem lost
+country_event = {
+	id = kc_religion_canaan_event.7
+	title = kc_canaan_pilgrimage_site_lost_title
+	desc = kc_canaan_pilgrimage_site_lost_desc
+	is_triggered_only = yes
+	trigger = {
+		religion = kc_canaan
+	}
+	option = {
+		name = kth_no
+		add_prestige = -5
+	}
+}
+
+#Adopt heir
+country_event = {
+	id = kc_religion_canaan_event.8
+	title = kc_canaan_adopt_heir_title
+	desc = kc_canaan_adopt_heir_desc
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = kc_canaan_adopt_heir_ongoing
+	}
+	after = {
+		clr_country_flag = kc_canaan_adopt_heir_ongoing
+	}
+	option = {
+		name = kc_canaan_adopt_heir_first
+		define_heir = {
+			dynasty = ROOT
+			max_random_adm = 4
+			age = 6
+		}
+	}
+	option = {
+		name = kc_canaan_adopt_heir_second
+		define_heir = {
+			dynasty = ROOT
+			max_random_dip = 4
+			age = 6
+		}
+	}
+
+	option = {
+		name = kc_canaan_adopt_heir_third
+		define_heir = {
+			dynasty = ROOT
+			max_random_mil = 4
+			age = 6
+			female = yes
+		}
+	}
+}
+
+#Animal Sacrifice
+country_event = {
+	id = kc_religion_canaan_event.9
+	title = kc_canaan_animal_sacrifice_title
+	desc = kc_canaan_animal_sacrifice_desc
+	is_triggered_only = yes
+	immediate = {
+		add_country_modifier = {
+			name = kc_canaan_rule_recent_animal_sacrifice_modifier
+			duration = 3650
+		}
+	}
+	option = {
+		name = kc_canaan_animal_sacrifice_elephant
+		add_years_of_income = -1
+		add_country_modifier = {
+			name = kc_canaan_animal_sacrifice_elephant_modifier
+			duration = 1825
+		}
+	}
+	option = {
+		name = kc_canaan_animal_sacrifice_cow
+		add_years_of_income = -0.5
+		add_country_modifier = {
+			name = kc_canaan_animal_sacrifice_cow_modifier
+			duration = 1825
+		}
+	}
+	option = {
+		name = kc_canaan_animal_sacrifice_lamb
+		add_years_of_income = -0.25
+		add_country_modifier = {
+			name = kc_canaan_animal_sacrifice_lamb_modifier
+			duration = 1825
+		}
+	}
+}
+
+
+#Changed religion
+country_event = {
+	id = kc_religion_canaan_event.99
+	title = kc_canaan_changed_religion_title
+	desc = kc_canaan_changed_religion_desc
+	trigger = {
+		NOT = { religion = kc_canaan }
+		OR = {
+			has_country_modifier = kc_canaan_rule_marriage_gemigamie_modifier
+			has_country_modifier = kc_canaan_rule_marriage_monogamie_modifier
+			has_country_modifier = kc_canaan_rule_marriage_celibacy_modifier
+			has_country_modifier = kc_canaan_rule_prayer_dancing_modifier 
+			has_country_modifier = kc_canaan_rule_prayer_bowing_modifier
+			has_country_modifier = kc_canaan_rule_prayer_kneeling_modifier 
+			has_country_modifier = kc_canaan_rule_ban_animal_sacrifices_modifier
+		}
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	option = {
+		remove_country_modifier = kc_canaan_rule_marriage_gemigamie_modifier
+		remove_country_modifier = kc_canaan_rule_marriage_monogamie_modifier
+		remove_country_modifier = kc_canaan_rule_marriage_celibacy_modifier
+		remove_country_modifier = kc_canaan_rule_prayer_dancing_modifier 
+		remove_country_modifier = kc_canaan_rule_prayer_bowing_modifier
+		remove_country_modifier = kc_canaan_rule_prayer_kneeling_modifier 
+		remove_country_modifier = kc_canaan_rule_ban_animal_sacrifices_modifier
+	}
+}

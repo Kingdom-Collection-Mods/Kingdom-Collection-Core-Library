@@ -1,0 +1,43 @@
+#donatist
+sound = {
+	name = start_convert_kc_donatist
+	file = "start_conversion_christian_orthodox.wav"
+}
+sound = {
+	name = religion_kc_donatist
+	file = "tab_religion_christian.wav"
+}
+sound = {
+	name = defender_of_the_kc_donatist_faith
+	file = "become_papal_controller.wav"
+}
+
+#judaic
+sound = {
+	name = start_convert_kc_jewish
+	file = "start_conversion_jewish.wav"
+}
+sound = {
+	name = religion_kc_jewish
+	file = "jewish_prayer.wav"
+}
+sound = {
+	name = defender_of_the_kc_jewish_faith
+	file = "shofar_short.wav"
+	volume = 0.8
+}
+sound = {
+	name = kc_jewish_blessings
+	file = "merchant_republic_view.wav"
+	volume = 0.8
+}
+
+#canaan
+sound = {
+	name = start_convert_kc_canaan
+	file = "start_conversion_norse.wav"
+}
+sound = {
+	name = religion_kc_canaan
+	file = "start_conversion_zoroastrian.wav"
+}

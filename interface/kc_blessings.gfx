@@ -1,0 +1,32 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_holy_site_379"
+		texturefile = "gfx//interface//holy_sites//aksum.dds"
+		loadType = "INGAME"
+	}	
+
+	spriteType = {
+		name = "GFX_holy_site_1854"
+		texturefile = "gfx//interface//holy_sites//alexandria.dds"
+		loadType = "INGAME"
+	}	
+
+	spriteType = {
+		name = "GFX_holy_site_345"
+		texturefile = "gfx//interface//holy_sites//antioch.dds"
+		loadType = "INGAME"
+	}	
+
+	spriteType = {
+		name = "GFX_holy_site_341"
+		texturefile = "gfx//interface//holy_sites//qasr_ibrim.dds"
+		loadType = "INGAME"
+	}	
+
+	spriteType = {
+		name = "GFX_holy_site_225"
+		texturefile = "gfx//interface//holy_sites//yerevan.dds"
+		loadType = "INGAME"
+	}
+	
+}

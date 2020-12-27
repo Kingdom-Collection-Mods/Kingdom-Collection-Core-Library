@@ -1,0 +1,61 @@
+#emunah: faith or trust in God
+kc_jewish_blessing_faith = {
+	is_blessing = yes
+
+	modifier = {
+		country_admin_power = 1
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+#mitzvah Torah study
+kc_jewish_blessing_duty = {
+	is_blessing = yes
+
+	modifier = {
+		country_diplomatic_power = 1
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+#Hanukkah: A festival celebrating liberation from oppression, freedom of worship, and finding light in the darkest of times.
+kc_jewish_blessing_dedication = {
+	is_blessing = yes
+
+	modifier = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+#fixing the world
+kc_jewish_blessing_world = {
+	is_blessing = yes
+
+	modifier = {
+		development_cost = -0.2
+		institution_spread_from_true_faith = 0.3
+	}
+	ai_will_do = {
+		factor = 10
+	}
+}
+
+#Weisheit
+kc_jewish_blessing_wisdom = {
+	is_blessing = yes
+
+	modifier = {
+		all_power_cost = -0.025
+		technology_cost = -0.05
+	}
+	ai_will_do = {
+		factor = 20
+	}
+}

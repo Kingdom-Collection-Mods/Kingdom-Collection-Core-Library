@@ -1,0 +1,17 @@
+# Berber Christians with Clubs
+kc_agonistici_mercs = {
+    regiments_per_development = 0.03
+	cavalry_weight = 0
+    artillery_weight = 0
+    cost_modifier = 0.6
+	sprites = { muslimgfx_sprite_pack }
+    trigger = {
+		religion = kc_donatist
+		has_country_flag = kc_enable_agonistici_mercs_flag
+	}
+	modifier = {
+		fire_damage = -0.5
+		infantry_power = -0.25
+		land_morale = 0.1
+	}
+}

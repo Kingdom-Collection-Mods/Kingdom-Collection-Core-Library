@@ -1,0 +1,13 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_temple_jewish_group"
+		texturefile = "gfx//interface//buildings//eastern_stock_exchange.tga"
+		loadType = "INGAME"
+	}
+	spriteType = {
+		name = "GFX_cathedral_jewish_group"
+		texturefile = "gfx//interface//buildings//eastern_college.tga"
+		loadType = "INGAME"
+	}
+}

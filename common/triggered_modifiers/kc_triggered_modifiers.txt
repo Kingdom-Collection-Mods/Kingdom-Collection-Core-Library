@@ -1,0 +1,87 @@
+###########################################
+# Canaan ruler holds canaan region
+###########################################
+kc_canaan_holds_canaan = {
+	potential = {
+		religion = kc_canaan
+	}
+
+	trigger = {
+	religion = kc_canaan
+		syria_area = {
+			type = ALL
+			religion = kc_canaan
+			owned_by = ROOT
+			is_core = ROOT
+		}
+		palatinate_area = {
+			type = ALL
+			religion = kc_canaan
+			owned_by = ROOT
+			is_core = ROOT
+		}
+	}
+	prestige = 0.5
+}
+
+kc_canaan_heathens_hold_jerusalem = {
+	potential = {
+		religion_group = christian
+		religion_group = muslim
+		religion_group = jewish_group
+	}
+
+	trigger = {
+		religion_group = christian
+		religion_group = muslim
+		religion_group = jewish_group
+		capital_scope = {
+			OR = {
+				continent = europe
+				superregion = africa_superregion
+				superregion = near_east_superregion
+			}
+		}
+		379 = {
+			owner = {
+				religion_group = kc_ancient_semitic_group
+			}
+			religion_group = kc_ancient_semitic_group
+		}	
+	}
+	prestige = -0.25
+	legitimacy = -0.1
+}
+
+kc_canaan_holds_jerusalem = {
+	potential = {
+		religion_group = kc_ancient_semitic_group
+	}
+
+	trigger = {
+		religion = kc_canaan
+		379 = {
+			owner = {
+				religion = kc_canaan
+			}
+		}	
+	}
+	legitimacy = 0.5
+	republican_tradition = 0.1
+}
+
+kc_canaan_lost_jerusalem = {
+	potential = {
+		religion = kc_canaan
+	}
+
+	trigger = {
+		379 = {
+			owner = {
+				NOT = { religion = kc_canaan }
+			}
+		}
+	}
+	legitimacy = -0.25
+	republican_tradition = -0.1
+}
