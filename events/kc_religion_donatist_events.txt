@@ -150,7 +150,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = kth_no
+		name = kc_nice_no
 		add_prestige = -5
 	}
 }

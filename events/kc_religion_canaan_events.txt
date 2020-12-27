@@ -18,7 +18,7 @@ country_event = {
 				NOT = { religion = kc_canaan }
 			}
 		}
-		name = kth_yes
+		name = kc_strong_yes
 		random_list = {
 			50 = {
 				add_ruler_modifier = {
@@ -60,7 +60,7 @@ country_event = {
 				religion = kc_canaan
 			}
 		}
-		name = kth_yes
+		name = kc_strong_yes
 		random_list = {
 			55 = {
 				add_ruler_modifier = {
@@ -88,7 +88,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = kth_no
+		name = kc_nice_no
 		reduce_legitimacy_small_effect = yes
 	}
 }
@@ -233,7 +233,7 @@ country_event = {
 	}
 	#Jerusalem
 	option = {
-		name = kth_yes
+		name = kc_strong_yes
 		379 = {
 			change_province_name = "Urushalim"
 			rename_capital = "Urushalim"
@@ -253,7 +253,7 @@ country_event = {
 		religion = kc_canaan
 	}
 	option = {
-		name = kth_yes
+		name = kc_strong_yes
 		add_prestige = 5
 	}
 }
@@ -268,7 +268,7 @@ country_event = {
 		religion = kc_canaan
 	}
 	option = {
-		name = kth_no
+		name = kc_nice_no
 		add_prestige = -5
 	}
 }
