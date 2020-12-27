@@ -1,0 +1,123 @@
+namespace = kc_decadency_events
+
+country_event = {
+	id = kc_decadency_events.1
+	picture = RELIGION_eventPicture
+	title = kc_start_time_of_decadency_title
+	desc = kc_start_time_of_decadency_desc
+
+	trigger = {
+		has_government_attribute = kc_enables_time_of_decadency
+		NOT = { has_country_modifier = kc_time_of_decadency_modifier }
+		stability = 0
+		NOT = { stability = 3 }
+		NOT = { republican_tradition = 75 }
+		prestige = 0
+	}
+	mean_time_to_happen = {
+		years = 50
+	}
+	option = {
+		name = kc_surprised_no
+		add_country_modifier = {
+			name = kc_time_of_decadency_modifier
+			duration = 1825
+		}
+	}
+}
+
+#Early End: Admin
+country_event = {
+	id = kc_decadency_events.2
+	picture = RELIGION_eventPicture
+	title = kc_end_decadency_title
+	desc = kc_end_decadency_buy_land_desc
+
+	trigger = {
+		has_country_modifier = kc_time_of_decadency_modifier
+	}
+	mean_time_to_happen = {
+		years = 5
+	}
+	option = {
+		name = kc_end_decadency_buy_land_option
+		remove_country_modifier = kc_time_of_decadency_modifier
+		change_estate_land_share = {
+			estate = ALL
+			share = -2
+		}
+		add_treasury = -100
+	}
+	option = {
+		name = kc_refuse
+		add_corruption = 0.5
+	}
+}
+
+#Early End: Dip
+country_event = {
+	id = kc_decadency_events.3
+	picture = RELIGION_eventPicture
+	title = kc_end_decadency_title
+	desc = kc_end_decadency_new_ruler_desc
+
+	trigger = {
+		has_country_modifier = kc_time_of_decadency_modifier
+	}
+	mean_time_to_happen = {
+		years = 5
+	}
+	option = {
+		name = kc_end_decadency_new_ruler_option
+		kill_ruler = yes
+		increase_legitimacy_large_effect = yes
+		remove_country_modifier = kc_time_of_decadency_modifier
+	}
+	option = {
+		name = kc_refuse
+		add_corruption = 0.5
+	}
+}
+
+#Early End: Mil
+country_event = {
+	id = kc_decadency_events.4
+	picture = RELIGION_eventPicture
+	title = kc_end_decadency_title
+	desc = kc_end_decadency_incorporate_mercs_desc
+
+	trigger = {
+		has_country_modifier = kc_time_of_decadency_modifier
+		any_hired_mercenary_company = {
+			hired_for_months = 6
+		}
+	}
+	mean_time_to_happen = {
+		years = 5
+	}
+	option = {
+		name = kc_end_decadency_incorporate_mercs_option
+		remove_country_modifier = kc_time_of_decadency_modifier
+		random_hired_mercenary_company = {
+			disband_mercenary_company = THIS
+		}
+		if = {
+			limit = {
+				NOT = { army_tradition = 50 }
+			}
+			create_general = {
+				tradition = 65
+			}
+		}
+		else = {
+			create_general = {
+				tradition = 85
+			}
+		}
+		add_yearly_manpower = 1
+	}
+	option = {
+		name = kc_refuse
+		add_corruption = 0.5
+	}
+}

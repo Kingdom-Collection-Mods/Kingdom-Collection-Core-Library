@@ -1,0 +1,20 @@
+namespace = kc_community
+
+country_event = {
+	id = kc_community.1
+	title = kc_achievement_event_title
+	desc = kc_achievement_event_desc
+	picture = WESTERNISATION_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		NOT = { has_country_flag = kc_disabled_selfpromo_flag }
+	}
+	option = {
+		highlight = yes
+		name = kc_achievement_option
+	}
+	option = {
+		name = kc_disable_selfpromo
+		set_country_flag = kc_disabled_selfpromo_flag
+	}
+}
