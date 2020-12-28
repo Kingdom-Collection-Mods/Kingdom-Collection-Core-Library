@@ -290,6 +290,10 @@ country_decisions = {
 		}
 		effect = {
 			set_ruler_flag = kc_canaan_switched_spouse_flag
+			hidden_effect = {
+				kill_consort = yes
+			}
+			define_consort = { }
 		}
 	}
 

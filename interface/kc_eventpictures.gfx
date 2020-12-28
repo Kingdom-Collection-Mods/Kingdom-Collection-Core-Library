@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "KC_KINGDOM_COLLECTION_eventPicture"
+		texturefile = "gfx/event_pictures/Kingdom_Collection_eventPicture.dds"
+	}
+}

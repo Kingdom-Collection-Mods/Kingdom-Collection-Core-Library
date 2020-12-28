@@ -29,7 +29,7 @@ country_event = {
 #Early End: Admin
 country_event = {
 	id = kc_decadency_events.2
-	picture = RELIGION_eventPicture
+	picture = REFORM_eventPicture
 	title = kc_end_decadency_title
 	desc = kc_end_decadency_buy_land_desc
 
@@ -57,7 +57,7 @@ country_event = {
 #Early End: Dip
 country_event = {
 	id = kc_decadency_events.3
-	picture = RELIGION_eventPicture
+	picture = LIBERUM_VETO_eventPicture
 	title = kc_end_decadency_title
 	desc = kc_end_decadency_new_ruler_desc
 
@@ -82,7 +82,7 @@ country_event = {
 #Early End: Mil
 country_event = {
 	id = kc_decadency_events.4
-	picture = RELIGION_eventPicture
+	picture = BATTLE_eventPicture
 	title = kc_end_decadency_title
 	desc = kc_end_decadency_incorporate_mercs_desc
 

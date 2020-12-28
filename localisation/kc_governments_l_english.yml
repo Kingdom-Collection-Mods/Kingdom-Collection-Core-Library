@@ -1,8 +1,9 @@
 ﻿l_english:
 ###Government Mechanics
 ##Time of Decadency
+ mechanic_kc_enables_time_of_decadency: "Time of Decadency mechanic"
  mechanic_kc_enables_time_of_decadency_yes: "Enables §YTime of Decadency§! events."
- mechanic_kc_enables_time_of_decadency_yes: "Disables §YTime of Decadency§! events."
+ mechanic_kc_enables_time_of_decadency_no: "Disables §YTime of Decadency§! events."
 #Modifiers and Events
  kc_start_time_of_decadency_title: "Time of Decadency"
  kc_start_time_of_decadency_desc: "Decadency is overcoming our government. We have reignded with to little legitimacy and to high stability. The upper class has become decadent which is hurting our society."

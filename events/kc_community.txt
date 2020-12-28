@@ -4,7 +4,7 @@ country_event = {
 	id = kc_community.1
 	title = kc_achievement_event_title
 	desc = kc_achievement_event_desc
-	picture = WESTERNISATION_eventPicture
+	picture = KC_KINGDOM_COLLECTION_eventPicture
 	is_triggered_only = yes
 	trigger = {
 		NOT = { has_country_flag = kc_disabled_selfpromo_flag }
@@ -12,9 +12,11 @@ country_event = {
 	option = {
 		highlight = yes
 		name = kc_achievement_option
+		custom_tooltip =  kc_achievement_option_tt
 	}
 	option = {
 		name = kc_disable_selfpromo
+		custom_tooltip =  kc_disable_selfpromo_tt
 		set_country_flag = kc_disabled_selfpromo_flag
 	}
 }
