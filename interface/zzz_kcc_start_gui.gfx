@@ -1,0 +1,7 @@
+spriteTypes = {
+	# Mod Icon:
+	spriteType = {
+		name = "GFX_kc_background"
+		textureFile = "gfx/interface/kingdom_collection_core/kingdom_collection_background_active.dds"
+	}
+}

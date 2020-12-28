@@ -126,7 +126,7 @@ country_event = {
 		years = 20
 	}
 	option = {
-		name = kth_send_help
+		name = kc_send_help
 		random_country = {
 			limit = {
 				religion = kc_donatist
@@ -160,7 +160,7 @@ country_event = {
 	title = kc_religion_donatist_pope_sends_support_title
 	is_triggered_only = yes
 	option = {
-		name = kth_thanks
+		name = kc_thanks
 		add_treasury = 100
 		add_country_modifier = {
 			name = kc_religion_donatist_papal_support_modifier

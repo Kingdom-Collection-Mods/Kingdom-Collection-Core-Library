@@ -18,3 +18,14 @@
  kc_achievement_event_title:0 "Kingdom Collection Achievement earned"
  kc_achievement_event_desc:0 "Congratulations for completing an achievement. Share your achievements on the Kingdom Collection Discord to gain points towards achievement hunter badges. You can find a link to the discord on the workshop page."
  kc_achievement_option:0 "Share your achievement on the KC Discord"
+
+
+ ### Start GUI
+ kc_gui_title:1 "§YKingdom Collection Core:§! §GEnabled§!"
+ kc_gui_title_expanded:1 "§YPartner Mods:§!" 
+ 
+ kc_gui_ngc_hint_title: "North German Confederation"
+ kc_gui_yug_hint_title: "Kingdom of Yugoslavia"
+ kc_gui_kth_hint_title: "City-State of Carthage"
+ kc_gui_cel_hint_title: "Celtic Union"
+ kce_gui_danelaw_hint_title: "Return of the Danelaw by Normace"

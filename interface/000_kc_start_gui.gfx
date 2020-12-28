@@ -1,0 +1,25 @@
+spriteTypes = {
+	# Mod Icons:
+	# Core
+	spriteType = {
+		name = "GFX_mod_icon_kcc_ngc"
+		textureFile = "gfx/interface/kingdom_collection_core/ngc_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_mod_icon_kcc_yug"
+		textureFile = "gfx/interface/kingdom_collection_core/yug_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_mod_icon_kcc_kth"
+		textureFile = "gfx/interface/kingdom_collection_core/kth_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_mod_icon_kcc_cel"
+		textureFile = "gfx/interface/kingdom_collection_core/cel_icon.dds"
+	}
+	# Expanded
+	spriteType = {
+		name = "GFX_mod_icon_kce_danelaw"
+		textureFile = "gfx/interface/kingdom_collection_expanded/danelaw_icon.dds"
+	}
+}
