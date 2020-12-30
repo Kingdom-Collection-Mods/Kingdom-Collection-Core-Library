@@ -22,3 +22,75 @@ kc_reduce_legitimacy_huge_effect = { #No IFs as the game hides these itself when
 	add_devotion = -30
 	add_republican_tradition = -15
 }
+
+
+
+kc_add_splendor_small_effect = {
+	if = {
+		limit = {
+			has_dlc = "Mandate of Heaven"
+		}
+		add_splendor = 100
+	}
+	else = {
+		add_adm_power = 25
+		add_dip_power = 25
+		add_mil_power = 25
+	}
+}
+
+kc_add_splendor_tiny_effect = {
+	if = {
+		limit = {
+			has_dlc = "Mandate of Heaven"
+		}
+		add_splendor = 50
+	}
+	else = {
+		add_adm_power = 10
+		add_dip_power = 10
+		add_mil_power = 10
+	}
+}
+
+kc_reduce_splendor_huge_effect = {
+	if = {
+		limit = {
+			has_dlc = "Mandate of Heaven"
+		}
+		add_splendor = -800
+	}
+	else = {
+		add_adm_power = -100
+		add_dip_power = -100
+		add_mil_power = -100
+	}
+}
+
+kc_reduce_splendor_small_effect = {
+	if = {
+		limit = {
+			has_dlc = "Mandate of Heaven"
+		}
+		add_splendor = -100
+	}
+	else = {
+		add_adm_power = -25
+		add_dip_power = -25
+		add_mil_power = -25
+	}
+}
+
+kc_reduce_splendor_tiny_effect = {
+	if = {
+		limit = {
+			has_dlc = "Mandate of Heaven"
+		}
+		add_splendor = -50
+	}
+	else = {
+		add_adm_power = -10
+		add_dip_power = -10
+		add_mil_power = -10
+	}
+}

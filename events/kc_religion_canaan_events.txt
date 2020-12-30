@@ -18,7 +18,7 @@ country_event = {
 				NOT = { religion = kc_canaan }
 			}
 		}
-		name = kc_strong_yes
+		name = kc_take_challenge
 		random_list = {
 			50 = {
 				add_ruler_modifier = {
@@ -27,21 +27,19 @@ country_event = {
 				}
 				add_stability_or_adm_power = yes
 			}
-			40 = {
+			35 = {
 				add_ruler_modifier = {
 					name = kc_canaan_pilgrimage_injury_modifier
 					duration = 1825
 				}
 				add_stability = -1
 			}
-			5 = {
+			10 = {
 				add_ruler_modifier = {
 					name = kc_canaan_pilgrimage_enlightened_modifier
 					duration = -1
 				}
 				change_adm = 1
-				change_dip = 1
-				change_mil = 1
 			}
 			5 = {
 				add_ruler_modifier = {
@@ -49,8 +47,6 @@ country_event = {
 					duration = -1
 				}
 				change_adm = -1
-				change_dip = -1
-				change_mil = -1
 			}
 		}
 	}
@@ -69,21 +65,19 @@ country_event = {
 				}
 				add_stability_or_adm_power = yes
 			}
-			40 = {
+			35 = {
 				add_ruler_modifier = {
 					name = kc_canaan_pilgrimage_injury_modifier
 					duration = 1825
 				}
 				add_stability = -1
 			}
-			5 = {
+			10 = {
 				add_ruler_modifier = {
 					name = kc_canaan_pilgrimage_enlightened_modifier
 					duration = -1
 				}
 				change_adm = 1
-				change_dip = 1
-				change_mil = 1
 			}
 		}
 	}
@@ -233,7 +227,7 @@ country_event = {
 	}
 	#Jerusalem
 	option = {
-		name = kc_strong_yes
+		name = kc_canaan_pilgrimage_site_option
 		379 = {
 			change_province_name = "Urushalim"
 			rename_capital = "Urushalim"
@@ -253,7 +247,7 @@ country_event = {
 		religion = kc_canaan
 	}
 	option = {
-		name = kc_strong_yes
+		name = kc_canaan_pilgrimage_site_conquered_option
 		add_prestige = 5
 	}
 }

@@ -323,6 +323,7 @@ country_decisions = {
 			religion = kc_canaan
 			years_of_income = 0.25
 			NOT = { has_country_modifier = kc_canaan_rule_recent_animal_sacrifice_modifier }
+			has_country_flag = kc_canaan_rule_allow_animal_sacrifices_flag
 		}
 		effect = {
 			country_event = {
