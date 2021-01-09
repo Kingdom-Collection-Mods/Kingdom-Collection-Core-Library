@@ -21,6 +21,8 @@
  kc_achievement_option:0 "Congratulations!"
  kc_achievement_option_tt:0 "Share your achievement on the Kingdom Collection Discord"
 
+ kc_ironman_tt: "Ironman enabled"
+
  ### Start GUI
  kc_gui_title:1 "§YKingdom Collection Core:§! §GEnabled§!"
  kc_gui_title_expanded:1 "§YPartner Mods:§!" 

@@ -1,8 +1,5 @@
 ﻿l_english:
- ###Generics
- kc_surprised_no: "Oh no!"
-
- ####NEW STUFF
+ ####Basic Religions
  kc_jewish: "Judaic"
  kc_jewish_religion_desc: "The oldest Abrahamic religion in the game, Judaism builds upon the Torah and the traditions and scriptures of the Jewish people going back over 3000 years."
  kc_ancient_semitic_group: "Ancient Semitic"
@@ -129,7 +126,7 @@
  kc_canaan_deity_motherhood: "Asherah"
  kc_canaan_deity_motherhood_desc: "Goddess of motherhood, fertility, and Lady of the Sea."
  kc_canaan_deity_thundergod: "Baal"
- kc_canaan_deity_thundergod_desc: "Master of thunder, god of storms, thunder, lightning and air."
+ kc_canaan_deity_thundergod_desc: "Master of thunder, storms, lightning and the air."
  kc_canaan_deity_strife: "Anat"
  kc_canaan_deity_strife_desc: "Virgin goddess of war and strife."
  kc_canaan_deity_moon: "Yarikh"
@@ -137,7 +134,7 @@
  kc_canaan_deity_food: "Dagan"
  kc_canaan_deity_food_desc: "God of rain and grain."
 
- #
+ #Canaan Pilgrimage
  kc_canaan_on_pilgrimage_modifier:0 "Ruler on Pilgrimage"
  desc_kc_canaan_on_pilgrimage_modifier:0 ""
  kc_canaan_pilgrimage_enlightened_modifier:0 "Enlightend Pilgrimer"

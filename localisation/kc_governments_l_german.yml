@@ -1,0 +1,19 @@
+﻿l_german:
+###Government Mechanics
+##Time of Decadency
+ mechanic_kc_enables_time_of_decadency: "Zeit der Dekadenz Mechanik"
+ mechanic_kc_enables_time_of_decadency_yes: "Aktiviert §YZeit der Dekadenz§! Ereignisse."
+ mechanic_kc_enables_time_of_decadency_no: "Aktiviert §YZeit der Dekadenz§! Ereignisse."
+#Modifiers and Events
+ kc_start_time_of_decadency_title: "Zeit der Dekadenz"
+ kc_start_time_of_decadency_desc: "Dekadenz wuchet in unserer Regierung. Wir haben mit zu wenig Legitimität und zu hoher Stabilität regiert. Die Oberschicht ist dekadent geworden, was unserer Gesellschaft schadet."
+ kc_time_of_decadency_modifier: "Zeit der Dekadenz"
+ desc_kc_time_of_decadency_modifier: "Das Land hat eine Zeit der Dekadenz. Dies wird durch die Regierungsreform des Landes ermöglicht."
+#Early Ends
+ kc_end_decadency_title:0 "Beende die Zeit der Dekadenz"
+ kc_end_decadency_buy_land_desc:0 ""
+ kc_end_decadency_buy_land_option:0 "Reduziere die Macht der Stände"
+ kc_end_decadency_new_ruler_desc:0 ""
+ kc_end_decadency_new_ruler_option:0 "Zeit für einen neue, weniger korrupten Herrscher"
+ kc_end_decadency_incorporate_mercs_desc:0 ""
+ kc_end_decadency_incorporate_mercs_option:0 "Integriere Söldner in das Heer"
