@@ -1,5 +1,18 @@
 guiTypes = {
 
+	positionType = {
+		name = "tooltip_offset_change_above_res"
+		position = { x = 1960 y = 1440 }
+	}
+	positionType = {
+		name = "tooltip_offset_small"
+		position = { x = 21 y = 24 }
+	}
+	positionType = {
+		name = "tooltip_offset_big"
+		position = { x = 42 y = 48 }
+	}
+
 	instantTextBoxType = {
 				name = "select_nation_label"
 				position = { x = 50 y = 50 }
@@ -48,7 +61,7 @@ guiTypes = {
 			name = "dlc_icon_bg"
 			spriteType = "GFX_dlc_icon_even_bg_flip"
 			position = { x = -30 y = 0 }
-			allwaystransparent = yes
+			alwaystransparent = yes
 		}
 
 		guiButtonType = {
@@ -248,11 +261,98 @@ guiTypes = {
 				iconType =
 				{
 					name ="frontend_dev_logo"
-					spriteType = "GFX_frontend_dev_logo"
-					position = { x= -155 y = 15 }
+					spriteType = "GFX_frontend_tinto_logo"
+					position = { x= -210 y = 15 }
 					Orientation = "UPPER_RIGHT"
 				}
 
+				# Based on the Expanded Mod Family GUI
+				# KINGDOM COLLECTION GUI START
+				## Window with Mod Icons
+				windowType = {
+					name = "kingdom_collection_title_window"
+					if_resolution = {
+						min_height = 1080
+						position = { x = 130 y = 190 }
+					}
+					if_resolution = {
+						max_height = 1079
+						min_height = 1050
+						position = { x = 130 y = 180 }
+					}
+					if_resolution = {
+						max_height = 1049
+						position = { x = -550 y = 200 }
+						orientation = upper_right
+					}
+
+					iconType = {
+						name = "kingdom_collection_window_bg"
+						position = { x = 0 y = 0 }
+						spriteType = "GFX_kc_background"
+					}
+
+					instantTextBoxType = {
+						name = "kingdom_collection_title"
+						position = { x = 46 y = 148 }
+						format = center
+						font = "Main_16"
+						text = "kc_gui_title"
+						maxWidth = 220
+						maxHeight = 20
+						fixedsize = yes
+						alwaystransparent = yes
+					}
+
+
+
+					### First Row of Mod Icons
+					guiButtonType = {
+						name = "mod_icon_kcc_ngc"
+						position = { x = 15 y = 170 }
+						spriteType = "GFX_mod_icon_kcc_ngc"
+					}
+
+					guiButtonType = {
+						name = "mod_icon_kcc_yug"
+						position = { x = 86 y = 170 }
+						spriteType = "GFX_mod_icon_kcc_yug"
+					}
+
+					guiButtonType = {
+						name = "mod_icon_kcc_kth"
+						position = { x = 156 y = 170 }
+						spriteType = "GFX_mod_icon_kcc_kth"
+					}
+
+					guiButtonType = {
+						name = "mod_icon_kcc_cel"
+						position = { x = 227 y = 170 }
+						spriteType = "GFX_mod_icon_kcc_cel"
+					}	
+
+					instantTextBoxType = {
+						name = "kingdom_collection_title_expanded"
+						position = { x = 36 y = 230 }
+						format = center
+						font = "Main_16"
+						text = "kc_gui_title_expanded"
+						maxWidth = 220
+						maxHeight = 20
+						fixedsize = yes
+						alwaystransparent = yes
+					}
+
+					### Second Row of Partner Mods
+					guiButtonType = {
+						name = "mod_icon_kce_danelaw"
+						position = { x = 15 y = 244 }
+						spriteType = "GFX_mod_icon_kce_danelaw"
+					}
+				}
+
+
+				# KINGDOM COLLECTION GUI END
 			}
 
 			### NEW CONTENT AVAILABLE.
@@ -405,8 +505,8 @@ guiTypes = {
 						position = { x = 50 y = 7 }
 						font = "vic_22"
 						format = left
-						maxWidth = 400
-						maxHeight = 100
+						maxWidth = 260
+						maxHeight = 45
 						fixedsize = yes
 						alwaystransparent = yes
 					}
@@ -436,7 +536,7 @@ guiTypes = {
 					maxWidth = 160
 					maxHeight = 24
 					fixedsize = yes
-					allwaystransparent = yes
+					alwaystransparent = yes
 				}
 				###
 
@@ -614,7 +714,7 @@ guiTypes = {
 			iconType =
 			{
 				name ="frontend_dev_logo"
-				spriteType = "GFX_frontend_dev_logo"
+				spriteType = "GFX_frontend_tinto_logo"
 				position = { x= 0 y = 0 }
 				Orientation = "UPPER_LEFT"
 			}
@@ -656,7 +756,7 @@ guiTypes = {
 				maxWidth = 220
 				maxHeight = 40
 				fixedsize = yes
-				allwaystransparent = yes
+				alwaystransparent = yes
 			}
 
 
@@ -1221,7 +1321,7 @@ guiTypes = {
 				# KINGDOM COLLECTION GUI START
 				## Window with Mod Icons
 				windowType = {
-					name = "expanded_mod_family_window"
+					name = "kingdom_collection_campaign_window"
 					if_resolution = {
 						min_width = 1300
 						min_height = 901
@@ -1310,6 +1410,9 @@ guiTypes = {
 						spriteType = "GFX_mod_icon_kce_danelaw"
 					}
 				}
+
+				
+				# KINGDOM COLLECTION GUI END
 
 				### SAVE GAMES
 				windowType = {
@@ -3003,7 +3106,7 @@ guiTypes = {
 			name = "dlc_icon_bg"
 			spriteType = "GFX_dlc_icon_bg"
 			position = { x = 0 y = 0 }
-			allwaystransparent = yes
+			alwaystransparent = yes
 		}
 
 		guiButtonType = {
@@ -3034,7 +3137,7 @@ guiTypes = {
 			name = "dlc_icon_bg"
 			spriteType = "GFX_dlc_icon_even_bg"
 			position = { x = 0 y = 0 }
-			allwaystransparent = yes
+			alwaystransparent = yes
 		}
 
 		guiButtonType = {
@@ -3535,13 +3638,13 @@ guiTypes = {
 		{
 			name ="connecting_bg"
 			spriteType = "GFX_connecting_bg"
-			position = { x= -3 y = -11 }
+			position = { x= -65 y = -11 }
 			Orientation = "UPPER_LEFT"
 		}
 
 		instantTextBoxType = {
 			name = "Title"
-			position = { x = 0 y = 31 }
+			position = { x = -11 y = 25 }
 
 			font = "vic_29s"
 			borderSize = {x = 4 y = 4}
@@ -3554,21 +3657,22 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "edit_title"
-			position = { x = 104 y = 81 }
+			position = { x = -11 y = 81 }
 
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}
 			text = "MATCHMAKING_SERVER_CONNECT_ADDRESS"
 			maxWidth = 500
 			maxHeight = 320
+			format = centre
 		}
 
 		editBoxType = {
-			position = { x = 104 y = 100 }
+			position = { x = 5 y = 108 }
 			name = "edit"
 			font = "Main_16"
-			borderSize = {x = 12 y = 8}
-			size = { x=300 y=24 }
+			borderSize = {x = 12 y = 4}
+			size = { x=500 y=32 }
 			text = ""
 			cursor = { x=0 y=-2 }
 			orientation = "UPPER_LEFT"
@@ -3577,21 +3681,22 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "password_title"
-			position = { x = 104 y = 131 }
+			position = { x = -11 y = 151 }
 
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}
 			text = "MATCHMAKING_SERVER_PASSWORD"
 			maxWidth = 500
 			maxHeight = 320
+			format = centre
 		}
 
 		editBoxType = {
-			position = { x = 104 y = 150 }
+			position = { x = 5 y = 177 }
 			name = "password"
 			font = "Main_16"
-			borderSize = {x = 12 y = 8}
-			size = { x=300 y=24 }
+			borderSize = {x = 12 y = 4}
+			size = { x=500 y=32 }
 			text = ""
 			cursor = { x=0 y=-2 }
 			orientation = "UPPER_LEFT"
@@ -3599,7 +3704,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "info_text"
-			position = { x = 104 y = 176 }
+			position = { x = -10 y = 200 }
 
 			font = "vic_18"
 			borderSize = {x = 4 y = 4}
@@ -3610,7 +3715,7 @@ guiTypes = {
 
 		guiButtonType = {
 			name = "ok_join_button"
-			position = { x=264 y =200}
+			position = { x=255 y =225}
 			quadTextureSprite ="largefloaterbutton"
 			tooltip = ""
 			tooltipText =""
@@ -3623,7 +3728,7 @@ guiTypes = {
 
 		guiButtonType = {
 			name = "back_button"
-			position = { x=101 y =200}
+			position = { x=90 y =225}
 			quadTextureSprite ="largefloaterbutton"
 			tooltip = ""
 			tooltipText =""

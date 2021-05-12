@@ -39,7 +39,7 @@ kc_jewish_blessing_world = {
 	is_blessing = yes
 
 	modifier = {
-		development_cost = -0.2
+		development_cost = -0.15
 		institution_spread_from_true_faith = 0.3
 	}
 	ai_will_do = {
