@@ -23,21 +23,7 @@ kc_reduce_legitimacy_huge_effect = { #No IFs as the game hides these itself when
 	add_republican_tradition = -15
 }
 
-
-
-kc_add_splendor_small_effect = {
-	if = {
-		limit = {
-			has_dlc = "Mandate of Heaven"
-		}
-		add_splendor = 100
-	}
-	else = {
-		add_adm_power = 25
-		add_dip_power = 25
-		add_mil_power = 25
-	}
-}
+## Add splendor effects
 
 kc_add_splendor_tiny_effect = {
 	if = {
@@ -53,17 +39,33 @@ kc_add_splendor_tiny_effect = {
 	}
 }
 
-kc_reduce_splendor_huge_effect = {
+kc_add_splendor_small_effect = {
 	if = {
 		limit = {
 			has_dlc = "Mandate of Heaven"
 		}
-		add_splendor = -800
+		add_splendor = 100
 	}
 	else = {
-		add_adm_power = -100
-		add_dip_power = -100
-		add_mil_power = -100
+		add_adm_power = 25
+		add_dip_power = 25
+		add_mil_power = 25
+	}
+}
+
+## Reduce splendor effect
+
+kc_reduce_splendor_tiny_effect = {
+	if = {
+		limit = {
+			has_dlc = "Mandate of Heaven"
+		}
+		add_splendor = -50
+	}
+	else = {
+		add_adm_power = -10
+		add_dip_power = -10
+		add_mil_power = -10
 	}
 }
 
@@ -81,16 +83,64 @@ kc_reduce_splendor_small_effect = {
 	}
 }
 
-kc_reduce_splendor_tiny_effect = {
+kc_reduce_splendor_medium_effect = {
 	if = {
 		limit = {
 			has_dlc = "Mandate of Heaven"
 		}
-		add_splendor = -50
+		add_splendor = -200
 	}
 	else = {
-		add_adm_power = -10
-		add_dip_power = -10
-		add_mil_power = -10
+		add_adm_power = -50
+		add_dip_power = -50
+		add_mil_power = -50
+	}
+}
+
+kc_reduce_splendor_large_effect = {
+	if = {
+		limit = {
+			has_dlc = "Mandate of Heaven"
+		}
+		add_splendor = -400
+	}
+	else = {
+		add_adm_power = -100
+		add_dip_power = -100
+		add_mil_power = -100
+	}
+}
+
+kc_reduce_splendor_huge_effect = {
+	if = {
+		limit = {
+			has_dlc = "Mandate of Heaven"
+		}
+		add_splendor = -800
+	}
+	else = {
+		add_adm_power = -150
+		add_dip_power = -150
+		add_mil_power = -150
+	}
+}
+
+kc_found_before_adm_requirement_10_effect = {
+	if = {
+		limit = {
+			NOT = { adm_tech = 10 }
+		}
+		custom_tooltip = kc_found_before_adm_requirement_10_tt
+		kc_reduce_splendor_large_effect = yes				
+	}
+}
+
+kc_found_before_adm_requirement_15_effect = {
+	if = {
+		limit = {
+			NOT = { adm_tech = 15 }
+		}
+		custom_tooltip = kc_found_before_adm_requirement_15_tt
+		kc_reduce_splendor_large_effect = yes				
 	}
 }

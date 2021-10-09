@@ -21,6 +21,9 @@
  kc_achievement_option:0 "Herzlichen Glückwunsch!"
  kc_achievement_option_tt:0 "Teile deine Errungenschaft mit dem Kingdom Collection Discord"
 
+ kc_found_before_adm_requirement_10_tt: "If §RNOT§! at least §YAdministrative Technology§! §Y10§!:"
+ kc_found_before_adm_requirement_15_tt: "If §RNOT§! at least §YAdministrative Technology§! §Y15§!:"
+
  kc_ironman_tt: "Ironman aktiv"
 
  ### Start GUI
