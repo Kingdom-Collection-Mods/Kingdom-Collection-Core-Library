@@ -8,7 +8,7 @@
  kc_start_time_of_decadency_title: "Time of Decadency"
  kc_start_time_of_decadency_desc: "Decadency is overcoming our government. We have reignded with to little legitimacy and to high stability. The upper class has become decadent which is hurting our society."
  kc_time_of_decadency_modifier: "Time of Decadency"
- desc_kc_time_of_decadency_modifier: "The country is having a time of decadency. This is enabled by the countrie's government reform."
+ desc_kc_time_of_decadency_modifier: "The country is having a time of decadency. This is enabled by the country's government reform."
 #Early Ends
  kc_end_decadency_title:0 "End the Time of Decadency"
  kc_end_decadency_buy_land_desc:0 ""
