@@ -4,8 +4,7 @@
 #2. Source: https://en.wikipedia.org/wiki/Ancient_Canaanite_religion#Deities
 
 #ʼĒl: King of the Gods
-kc_canaan_deity_godking =
-{
+kc_canaan_deity_godking = {
 	legitimacy = 0.75
 	republican_tradition = 0.4
 	
@@ -26,8 +25,7 @@ kc_canaan_deity_godking =
 }
 
 #Asherah(Athirat/Ashirta/Asherah): Goddess of motherhood and fertility Lady of the Sea
-kc_canaan_deity_motherhood =
-{
+kc_canaan_deity_motherhood = {
 	local_monthly_devastation = -0.25
 	global_sailors_modifier = 0.2
 	
@@ -46,10 +44,8 @@ kc_canaan_deity_motherhood =
 		}
 	}
 }
-#NOT USED Adonis: god of youth, beauty and desire
 #Baal(Hadad/Adad): master of thunder, god of storms, thunder, lightning and air. King of the gods.
-kc_canaan_deity_thundergod =
-{
+kc_canaan_deity_thundergod = {
 	core_creation = -0.1
 	siege_ability = 0.1
 	
@@ -65,8 +61,7 @@ kc_canaan_deity_thundergod =
 	}
 }
 #Anat: virgin goddess of war and strife
-kc_canaan_deity_strife =
-{
+kc_canaan_deity_strife = {
 	infantry_power = 0.1
 	global_missionary_strength = 0.02
 	
@@ -86,10 +81,9 @@ kc_canaan_deity_strife =
 	}
 }
 #Yarikh: god of the moon
-kc_canaan_deity_moon =
-{
-	global_foreign_trade_power = 0.05
-	navy_tradition = 0.5
+kc_canaan_deity_moon = {
+	global_foreign_trade_power = 0.1
+	navy_tradition = 1
 	
 	allow = { religion = kc_canaan }
 	sprite = 11
@@ -112,9 +106,9 @@ kc_canaan_deity_moon =
 }
 
 #Dagan: god of rain and grain
-kc_canaan_deity_food =
-{
+kc_canaan_deity_food = {
 	idea_cost = -0.1
+	army_tradition = 0.5
 	
 	allow = { religion = kc_canaan }
 	sprite = 12

@@ -2,7 +2,10 @@
  ###Generics
  kc_accept: "Annehmen"
  kc_refuse: "Ablehnen"
- kc_strong_yes: "Ja!"
+ kc_okay: "Okay"
+ kc_yes: "Ja"
+ kc_no: "Nein"
+ kc_strong_yes: "Auf jeden Fall!"
  kc_surprised_no: "Oh nein!"
  kc_nice_no: "Nein danke"
  kc_smash_them: "We werden sie zerschmettern!"

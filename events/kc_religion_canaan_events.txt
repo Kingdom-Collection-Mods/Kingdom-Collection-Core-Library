@@ -315,6 +315,11 @@ country_event = {
 	desc = kc_canaan_animal_sacrifice_desc
 	picture = BIG_BOOK_eventPicture #placeholder
 	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_country_modifier = kc_canaan_rule_recent_animal_sacrifice_modifier
+		}
+	}
 	immediate = {
 		add_country_modifier = {
 			name = kc_canaan_rule_recent_animal_sacrifice_modifier
@@ -370,6 +375,7 @@ country_event = {
 		months = 1
 	}
 	option = {
+		name = kc_okay
 		remove_country_modifier = kc_canaan_rule_marriage_gemigamie_modifier
 		remove_country_modifier = kc_canaan_rule_marriage_monogamie_modifier
 		remove_country_modifier = kc_canaan_rule_marriage_celibacy_modifier

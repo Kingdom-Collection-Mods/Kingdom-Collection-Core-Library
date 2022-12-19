@@ -5,7 +5,7 @@ kc_heathen_conversion_zeal = {
 
 kc_jewish_scholar_ruler_modifier = {
     idea_cost = -0.05
-    innovativeness_gain = 0.25
+    innovativeness_gain = 0.2
 }
 
 kc_jewish_king_ruler_modifier = {
@@ -30,7 +30,7 @@ kc_jewish_war_republic_modifier = {
 }
 
 kc_jewish_reinstated_proselytism_modifier = {
-    global_missionary_strength = 0.02
+    global_missionary_strength = 0.025
 }
 
 kc_spirit_of_reformation_modifier = {

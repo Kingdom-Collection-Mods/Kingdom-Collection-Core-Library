@@ -2,6 +2,9 @@
  ###Generics
  kc_accept: "Accept"
  kc_refuse: "Refuse"
+ kc_okay: "Okay"
+ kc_yes: "Yes"
+ kc_no: "No"
  kc_strong_yes: "Yes, indeed!"
  kc_surprised_no: "Oh no!"
  kc_nice_no: "No, thanks"

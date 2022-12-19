@@ -1,4 +1,0 @@
-kc_time_of_decadency_modifier = {
-    all_power_cost = 0.01
-    republican_tradition = -0.1
-}

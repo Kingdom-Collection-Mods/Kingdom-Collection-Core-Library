@@ -1,6 +1,6 @@
 christian = {
 	kc_donatist = {
-		color = { 190 165 0 }
+		color = { 175 155 5 }
 		icon = 31
 		allowed_conversion = {
 			catholic
