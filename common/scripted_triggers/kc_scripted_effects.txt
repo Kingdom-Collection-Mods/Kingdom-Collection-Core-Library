@@ -1,0 +1,20 @@
+kc_found_before_adm_requirement_10_trigger = {
+	OR = {
+		adm_tech = 10
+		kc_reduce_splendor_large_trigger = yes		
+	}
+}
+
+kc_reduce_splendor_large_trigger = {
+	if = {
+		limit = {
+			has_dlc = "Mandate of Heaven"
+		}
+		splendor = 400
+	}
+	else = {
+		adm_power = 100
+		dip_power = 100
+		mil_power = 100
+	}
+}
