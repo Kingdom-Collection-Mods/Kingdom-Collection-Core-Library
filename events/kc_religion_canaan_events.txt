@@ -257,6 +257,7 @@ country_event = {
 	id = kc_religion_canaan_event.7
 	title = kc_canaan_pilgrimage_site_lost_title
 	desc = kc_canaan_pilgrimage_site_lost_desc
+	picture = SIEGE_eventPicture
 	is_triggered_only = yes
 	trigger = {
 		religion = kc_canaan
