@@ -4,4 +4,4 @@ tags={
 }
 name="Kingdom Collection Core - Internal"
 picture="thumbnail.png"
-supported_version="1.37.*"
+supported_version="v1.37.*"
